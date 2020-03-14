@@ -28,7 +28,7 @@
 
                 @if(auth()->guard('admin')->user()->hasAnyPermission(['dashboard-show']) )
                     <li class="nav-item">
-                        <a href="{{route('admin.administrations.index')}}"
+                        <a href="{{route('admin.dashboard')}}"
                            class="nav-link {{ request()->is('admin/dashboard')? 'active':'' }}">
                             <i class="fas fa-tachometer-alt"></i>                            <p>
                                 {{__('dashboard.Dashboard')}}
