@@ -4,7 +4,7 @@
     <section class="content">
         <div class="container">
 
-            @include('administration.partial.title',['title'=>'Update User Account Data','delete_link'=>'admin.user.destroy','model_id'=>$user->id])
+            @include('administration.partial.title',['title'=>__('dashboard.Update User Account'),'delete_link'=>'admin.user.destroy','model_id'=>$user->id])
             @include('administration.partial.show_errors')
             @include('administration.partial.show_success')
 
@@ -18,22 +18,22 @@
                         <input type="hidden" value="{{$user->id}}" name="id">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name"> Name</label>
+                                <label for="name"> {{__('dashboard.Name')}}</label>
                                 <input type="text" value="{{$user->name}}" name="name" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label for="email">email</label>
+                                <label for="email">{{__('dashboard.Email')}}</label>
                                 <input type="text" value="{{$user->email}}" name="email" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label for="password">password</label>
+                                <label for="password">{{__('dashboard.Password')}}</label>
                                 <input type="password" name="password" class="form-control">
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">{{__('dashboard.submit')}}</button>
                             </div>
                         </div>
                     </form>

@@ -34,6 +34,8 @@ class RolesAndPermissionsSeeder extends Seeder
 
         Permission::create(['guard_name' => 'admin', 'name' => 'permission-list']);
 
+        Permission::create(['guard_name' => 'admin', 'name' => 'dashboard-show']);
+
 
         // create roles and assign created permissions
         $role = Role::create(['guard_name' => 'admin', 'name' => 'accounting'])

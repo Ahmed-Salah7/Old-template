@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Content Header (Page header) -->
-    @include('administration.partial.title',['title'=>'Roles Management','create_link'=>'admin.role.create'])
+    @include('administration.partial.title',['title'=>__('dashboard.Roles Management'),'create_link'=>'admin.role.create'])
     @include('administration.partial.show_errors')
     @include('administration.partial.show_success')
     <!-- /.content-header -->
@@ -21,8 +21,8 @@
                             <table id="users_table" class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Action</th>
+                                    <th>{{__('dashboard.Name')}}</th>
+                                    <th>{{__('dashboard.Option')}}</th>
                                 </tr>
                                 </thead>
 

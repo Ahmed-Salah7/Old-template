@@ -9,7 +9,7 @@
     <section class="content">
         <div class="container">
 
-            @include('administration.partial.title',['title'=>'Update administration Account Data','delete_link'=>'admin.administration.destroy','model_id'=>$administration->id])
+            @include('administration.partial.title',['title'=>__('dashboard.Update Administration Account'),'delete_link'=>'admin.administration.destroy','model_id'=>$administration->id])
             @include('administration.partial.show_errors')
             @include('administration.partial.show_success')
 
@@ -24,21 +24,21 @@
                         <input type="hidden" value="{{$administration->id}}" name="id">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name"> Name</label>
+                                <label for="name"> {{__('dashboard.Name')}}</label>
                                 <input type="text" value="{{$administration->name}}" name="name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="email">email</label>
+                                <label for="email">{{__('dashboard.Email')}}</label>
                                 <input type="text" value="{{$administration->email}}" name="email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="password">password</label>
+                                <label for="password">{{__('dashboard.Password')}}</label>
                                 <input type="password" name="password" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Choose Roles</label>
+                                <label>{{__('dashboard.Choose Role')}}</label>
                                 <select name="roles[]" class="select2" multiple="multiple"
-                                        data-placeholder="Select a State"
+                                        data-placeholder=""
                                         style="width: 100%;">
                                     @foreach($roles as $role)
                                         <option {{in_array($role->id,$roles_administration ) ? 'selected':''}}
@@ -48,7 +48,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">{{__('dashboard.submit')}}</button>
                             </div>
                         </div>
                     </form>

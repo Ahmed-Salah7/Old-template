@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Content Header (Page header) -->
-    @include('administration.partial.title',['title'=>'Users Management','create_link'=>'admin.user.create'])
+    @include('administration.partial.title',['title'=>__('dashboard.Users Management'),'create_link'=>'admin.user.create'])
     @include('administration.partial.show_errors')
     @include('administration.partial.show_success')
     <!-- /.content-header -->
@@ -21,10 +21,10 @@
                             <table id="users_table" class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>{{__('dashboard.Name')}}</th>
+                                    <th>{{__('dashboard.Email')}}</th>
+                                    <th>{{__('dashboard.Option')}}</th>
                                 </tr>
                                 </thead>
 

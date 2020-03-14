@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Content Header (Page header) -->
-    @include('administration.partial.title',['title'=>'Activity Log'])
+    @include('administration.partial.title',['title'=>__('dashboard.Activity Log')])
     <!-- /.content-header -->
 
     <!-- Main content -->
@@ -19,12 +19,13 @@
                             <table id="vendor_table" class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>Action</th>
-                                    <th>Model Id</th>
-                                    <th>Model Type</th>
-                                    <th>Causer Name</th>
-                                    <th>Causer Type</th>
-                                    <th>Option</th>
+                                    <th>{{__('dashboard.Action')}}</th>
+                                    <th>{{__('dashboard.Model ID')}}</th>
+                                    <th>{{__('dashboard.Model Type')}}</th>
+                                    <th>{{__('dashboard.Causer Name')}}</th>
+                                    <th>{{__('dashboard.Causer Type')}}</th>
+                                    <th>{{__('dashboard.Date')}}</th>
+                                    <th>{{__('dashboard.Option')}}</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -53,6 +54,7 @@
                         {data: 'model_type', name: 'model_type'},
                         {data: 'causer_name', name: 'causer_name'},
                         {data: 'causer_type', name: 'causer_type'},
+                        {data: 'created_at', name: 'created_at'},
                         {data: 'option', name: 'option'},
                     ]
                 }

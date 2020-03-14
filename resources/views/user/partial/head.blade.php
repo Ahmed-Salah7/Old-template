@@ -16,8 +16,8 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{asset('adminlte/plugins/jqvmap/jqvmap.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">
-    <!-- overlayScrollbars -->
+{{--    <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">--}}
+<!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{asset('adminlte/plugins/daterangepicker/daterangepicker.css')}}">
@@ -26,6 +26,12 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
+    @if(Session::get('locale') == 'ar')
+        <link rel="stylesheet" href="{{asset('adminlte/dist-rtl/css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{asset('adminlte/dist-rtl/css/custom.css')}}">
+    @else
+        <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">
+    @endif
     @stack('styles')
 
 </head>

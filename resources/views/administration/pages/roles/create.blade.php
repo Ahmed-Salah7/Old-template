@@ -9,7 +9,7 @@
     <section class="content">
         <div class="container">
 
-            @include('administration.partial.title',['title'=>'Create Role'])
+            @include('administration.partial.title',['title'=>__('dashboard.Create Role')])
             @include('administration.partial.show_errors')
             @include('administration.partial.show_success')
 
@@ -23,13 +23,13 @@
                         <div class="card-body">
 
                             <divl class="form-group">
-                                <label for="name"> Name</label>
+                                <label for="name"> {{__('dashboard.Name')}}</label>
                                 <input type="text" value="{{old('name')}}" name="name" class="form-control">
                             </divl>
 
 
                             <div class="form-group">
-                                <label>Multiple</label>
+                                <label>{{__('dashboard.Choose Permissions')}}</label>
                                 <select name="permissions[]" class="select2" multiple="multiple"
                                         data-placeholder="Select a State"
                                         style="width: 100%;">
@@ -40,7 +40,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">{{__('dashboard.submit')}}</button>
                             </div>
                         </div>
                     </form>

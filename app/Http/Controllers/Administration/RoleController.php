@@ -42,10 +42,10 @@ class RoleController extends Controller
             })
             ->addColumn('action', function ($role) {
                 return '
-            <a href=' . route("admin.role.show", $role->id) . '><button class="btn btn-warning">Show</button></a>
-            <a href=' . route("admin.role.edit", $role->id) . '><button class="btn btn-info">Edit</button></a>
+            <a href=' . route("admin.role.show", $role->id) . '><button class="btn btn-warning">'.__("dashboard.Show").'</button></a>
+            <a href=' . route("admin.role.edit", $role->id) . '><button class="btn btn-info">'.__("dashboard.Edit").'</button></a>
 
-            <a onclick="event.preventDefault(); document.getElementById(\'' . $role->id . '-button-logout\').submit();"  href="#"><button class="btn btn-danger">Delete</button></a>
+            <a onclick="event.preventDefault(); document.getElementById(\'' . $role->id . '-button-logout\').submit();"  href="#"><button class="btn btn-danger">'.__("dashboard.Delete").'</button></a>
             <form id="' . $role->id . '-button-logout" action=' . route("admin.role.destroy", $role->id) . ' method="post">
            <input type="hidden" name="_token" value= ' . csrf_token() . '>
                 <input name="_method" type="hidden" value="delete">

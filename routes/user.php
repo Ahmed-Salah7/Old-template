@@ -2,7 +2,7 @@
 Auth::routes();
 
 Route::namespace('User')->group(function () {
-    Route::get('/dashboard', 'DesignController@index');
+    Route::get('/dashboard', 'DesignController@index')->name('dashboard');
 });
 
 

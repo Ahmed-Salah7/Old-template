@@ -3,7 +3,7 @@
 @endpush
 @section('content')
     <!-- Content Header (Page header) -->
-    @include('administration.partial.title',['title'=>'Permissions Management'])
+    @include('administration.partial.title',['title'=>__('dashboard.Permissions Management')])
     <!-- /.content-header -->
     <!-- Main content -->
     <section class="content">
@@ -17,8 +17,8 @@
                             <table id="permissions_table" class="table table-hover text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Action</th>
+                                    <th>{{__('dashboard.Name')}}</th>
+                                    <th>{{__('dashboard.Option')}}</th>
                                 </tr>
                                 </thead>
                             </table>

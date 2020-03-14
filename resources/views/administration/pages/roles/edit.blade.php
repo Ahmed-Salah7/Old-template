@@ -9,7 +9,7 @@
     <section class="content">
         <div class="container">
 
-            @include('administration.partial.title',['title'=>'Update Role Data','delete_link'=>'admin.role.destroy','model_id'=>$role->id])
+            @include('administration.partial.title',['title'=>__('dashboard.Update Role'),'delete_link'=>'admin.role.destroy','model_id'=>$role->id])
             @include('administration.partial.show_errors')
             @include('administration.partial.show_success')
 
@@ -24,13 +24,13 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label for="name"> Name</label>
+                                <label for="name"> {{__('dashboard.Name')}}</label>
                                 <input type="text" value="{{$role->name}}" name="name" class="form-control">
                             </div>
 
 
                             <div class="form-group">
-                                <label>Choose Roles</label>
+                                <label>{{__('dashboard.Choose Role')}}</label>
                                 <select name="permissions[]" class="select2" multiple="multiple"
                                         data-placeholder="Select a State"
                                         style="width: 100%;">

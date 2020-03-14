@@ -16,7 +16,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{asset('adminlte/plugins/jqvmap/jqvmap.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">--}}
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <!-- Daterange picker -->
@@ -34,7 +34,12 @@
     {{--    datatable--}}
 
     <link rel="stylesheet" href="{{asset('css/custom_admin_style.css')}}">
-
+    @if(Session::get('locale') == 'ar')
+        <link rel="stylesheet" href="{{asset('adminlte/dist-rtl/css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{asset('adminlte/dist-rtl/css/custom.css')}}">
+    @else
+        <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">
+    @endif
     @stack('styles')
 
 </head>

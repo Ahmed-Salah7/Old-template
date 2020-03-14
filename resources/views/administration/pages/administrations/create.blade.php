@@ -9,7 +9,7 @@
     <section class="content">
         <div class="container">
 
-            @include('administration.partial.title',['title'=>'Create Administration Account'])
+            @include('administration.partial.title',['title'=>__('dashboard.Create Administration Account')])
             @include('administration.partial.show_errors')
             @include('administration.partial.show_success')
 
@@ -21,24 +21,24 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name"> Name</label>
+                                <label for="name"> {{__('dashboard.Name')}}</label>
                                 <input type="text" value="{{old('name')}}" name="name" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label for="email">email</label>
+                                <label for="email">{{__('dashboard.Email')}}</label>
                                 <input type="text" value="{{old('email')}}" name="email" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label for="password">password</label>
+                                <label for="password">{{__('dashboard.Password')}}</label>
                                 <input type="password" value="{{old('password')}}" name="password" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <label>Choose Roles</label>
+                                <label>{{__('dashboard.Choose Role')}}</label>
                                 <select name="roles[]" class="select2" multiple="multiple"
-                                        data-placeholder="Select a State"
+                                        data-placeholder=""
                                         style="width: 100%;">
                                     @foreach($roles as $role)
                                         <option value="{{$role->id}}">{{$role->name}}</option>
@@ -47,7 +47,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">{{__('dashboard.submit')}}</button>
                             </div>
                         </div>
                     </form>

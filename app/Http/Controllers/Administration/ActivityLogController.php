@@ -40,7 +40,7 @@ class ActivityLogController extends Controller
                     return isset($activity->causer) ? $activity->causer->name : '-';
                 })
                 ->addColumn('option', function ($activity) {
-                    return '  <a href=' . route("admin.activity.show", $activity->id) . '><button class="btn btn-warning">Show</button></a>';
+                    return '  <a href=' . route("admin.activity.show", $activity->id) . '><button class="btn btn-warning">' . __("dashboard.Show") . '</button></a>';
                 })
                 ->rawColumns(['option'])
                 ->make(true);

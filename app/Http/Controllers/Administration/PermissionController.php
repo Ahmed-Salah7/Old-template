@@ -33,7 +33,7 @@ class PermissionController extends Controller
             })
             ->addColumn('action', function ($user) {
                 return '
-            <a href=' . route("admin.permission.show", $user->id) . '><button class="btn btn-warning">Show</button></a>
+            <a href=' . route("admin.permission.show", $user->id) . '><button class="btn btn-warning">'.__("dashboard.Show").'</button></a>
             ';
             })
             ->rawColumns(['action'])
