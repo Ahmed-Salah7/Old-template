@@ -54,6 +54,9 @@ Route::namespace('Administration')->group(function () {
     ])->only(['index', 'show']);
     Route::get('/users-permission-ajax', 'PermissionController@permissions_index_ajax')->name('admin.permissions.index.ajax');
 
+    Route::get('/activity-index', 'ActivityLogController@index')->name('admin.activity.index');
+    Route::get('/activity-index-ajax', 'ActivityLogController@index')->name('admin.activity.index.ajax');
+    Route::get('/admin-activity-show/{id}', 'ActivityLogController@show')->name('admin.activity.show');
 
     Route::get('/media-index', 'MediaController@index')->name('admin.media.index');
     Route::post('/media-upload', 'MediaController@media_upload')->name('admin.media.upload');

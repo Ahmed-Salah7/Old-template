@@ -6,6 +6,7 @@ use App\Notifications\AdminResetPasswordNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
@@ -16,7 +17,12 @@ use Spatie\MediaLibrary\File;
 
 class Admin extends Authenticatable implements HasMedia
 {
-    use Notifiable, HasRoles, HasMediaTrait;
+    use Notifiable, HasRoles, HasMediaTrait , LogsActivity;
+
+    //    protected $ignoreChangedAttributes = ['updated_at'];
+    protected static $logOnlyDirty = true;
+
+    protected static $logFillable = true;
 
     protected $guarded = 'admin';
     /**
